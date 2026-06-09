@@ -9,5 +9,6 @@
 !.gitignore
 !README.md
 !settings.json
+!before-relaunch.sh
 !hooks/
 !hooks/*
