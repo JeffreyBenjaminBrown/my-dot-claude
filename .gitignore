@@ -1,0 +1,13 @@
+# This directory is CLAUDE_CONFIG_DIR. At runtime Claude writes volatile state
+# AND SECRETS here -- .credentials.json, .claude.json, history.jsonl, sessions/,
+# projects/, todos/, file-history/, statsig/, telemetry/, caches, etc.
+#
+# Whitelist strategy: ignore EVERYTHING, then un-ignore only the curated config.
+# This way anything Claude dumps here in the future stays untracked by default,
+# so a credential or transcript can never be committed by accident.
+*
+!.gitignore
+!README.md
+!settings.json
+!hooks/
+!hooks/*
