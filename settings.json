@@ -1,4 +1,5 @@
 {
+  "model": "opus",
   "hooks": {
     "Stop": [
       {
@@ -6,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/ubuntu/host/my-dot-claude/hooks/beep-if-main-agent.sh beep-soothing"
+            "command": "$CLAUDE_CONFIG_DIR/hooks/beep-if-main-agent.sh beep-soothing"
           }
         ]
       }
@@ -28,7 +29,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/ubuntu/host/my-dot-claude/hooks/beep-if-main-agent.sh beep-harsh"
+            "command": "$CLAUDE_CONFIG_DIR/hooks/beep-if-main-agent.sh beep-harsh"
           }
         ]
       },
@@ -37,15 +38,24 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/ubuntu/host/my-dot-claude/hooks/beep-if-main-agent.sh beep-harsh"
+            "command": "$CLAUDE_CONFIG_DIR/hooks/beep-if-main-agent.sh beep-harsh"
           }
         ]
       }
     ]
   },
   "alwaysThinkingEnabled": true,
-  "skipDangerousModePermissionPrompt": true,
+  "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    },
+    "claude-fable-5-1": {
+      "effortLevel": "xhigh"
+    }
+  },
   "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
-  "effortLevel": "xhigh"
+  "promptSuggestionEnabled": false
 }
