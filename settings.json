@@ -11,6 +11,17 @@
         ]
       }
     ],
+    "SubagentStop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ubuntu/host/my-dot-claude/hooks/beep-if-main-agent.sh beep-soothing-octave-up"
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "ExitPlanMode",

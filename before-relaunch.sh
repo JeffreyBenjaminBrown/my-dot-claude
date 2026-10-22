@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run this INSIDE a container, BEFORE you `docker rm` + relaunch it, so you
+# Run this inside a container, before you `docker rm` + relaunch it, so you
 # don't lose Claude history when you move to a newer image.
 #
 # It does two things:
@@ -7,7 +7,7 @@
 #      shared config (clones it via HTTPS if missing, else pulls). The image has
 #      no ssh, so we fetch over HTTPS -- works as long as the repo is public
 #      (for a private repo, set up a token / credential helper first).
-#   2. Copies THIS container's ephemeral Claude state -- session transcripts
+#   2. Copies this container's ephemeral Claude state -- session transcripts
 #      (`--resume`), prompt history, credentials, config -- into that checkout,
 #      which lives on the host bind-mount and therefore survives the rebuild.
 #
