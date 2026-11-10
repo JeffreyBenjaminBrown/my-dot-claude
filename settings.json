@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/home/ubuntu/host/my-dot-claude/hooks/beep-if-main-agent.sh beep-soothing-octave-up"
+            "command": "/home/ubuntu/host/my-dot-claude/hooks/beep-if-main-agent.sh beep-soothing octave-up"
           }
         ]
       }
@@ -54,8 +54,8 @@
       "effortLevel": "xhigh"
     }
   },
+  "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "theme": "dark",
-  "promptSuggestionEnabled": false
+  "theme": "dark"
 }

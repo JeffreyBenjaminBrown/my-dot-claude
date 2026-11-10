@@ -19,8 +19,6 @@ because this dir lives on the host bind-mount (`/home/ubuntu/host`).
   internal helpers, and for a main-agent turn that ends with a subagent still
   running. Sets `XDG_RUNTIME_DIR` and detaches via `setsid`+`timeout` so it
   actually sounds from Claude's stripped hook environment.
-- `hooks/beep-soothing-octave-up.wav` — `beep-soothing` played twice as fast;
-  regenerate with `hooks/generate-soothing-beep-octave-up.sh`.
 
 Everything else Claude writes here (`.credentials.json`, `.claude.json`,
 `history.jsonl`, `sessions/`, `projects/`, ...) is volatile and/or secret and is
@@ -41,4 +39,5 @@ ignored by the whitelist in `.gitignore`.
 
 `beep-soothing` (turn done), `beep-harsh` (needs attention: ExitPlanMode,
 AskUserQuestion), `beep-glorious` — all `/home/sound/*.wav`, provided by the image.
-`beep-soothing-octave-up` (subagent done) lives in `hooks/`.
+A subagent finishing plays `beep-soothing` an octave up: the hook's second
+argument, `octave-up`, makes pw-play read the samples at twice their rate.
